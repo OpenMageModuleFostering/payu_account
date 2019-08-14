@@ -1,13 +1,13 @@
 {
     "name": "OpenMageModuleFostering/PayU_Account",
     "type": "magento-module",
-    "license": "GNU-General-Public-License",
+    "license": "Free",
     "homepage": "",
-    "description": "Official PayU payment gateway module (Poland)",
+    "description": "The plug-in redirects to payment method summary page where user can choose among the most popular payment methods.",
     "authors": [
     {
         "name": "PayU",
-        "email": "openpayu@payu.pl"
+        "email": "sdk@payu.com"
     }
 ],
     "suggest": {
