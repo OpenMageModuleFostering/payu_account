@@ -1,11 +1,11 @@
 <?php 
 
 /**
- *	ver. 0.1.6.5.1
+ *	ver. 1.8.0
  *	PayU Update Info Block
  *
  *	@copyright  Copyright (c) 2011-2012 PayU
- *	@license    http://opensource.org/licenses/LGPL-3.0  Open Software License (LGPL 3.0)
+ *	@license    http://opensource.org/licenses/GPL-3.0  Open Software License (GPL 3.0)
  *	http://www.payu.com
  *	http://www.openpayu.com
  *	http://twitter.com/openpayu
@@ -42,34 +42,40 @@ class PayU_Account_Block_UpdateInfo extends Mage_Adminhtml_Block_System_Config_F
         
         }         
         $html .= Mage::helper('payu_account')->__('Documents attached to this implementation').":<br>";
-        
-        foreach($latestVersion['docs']['guides'] as $doc){
-        
-	        $html .= $this->getLayout()->createBlock('adminhtml/widget_button')
-	                    ->setType('button')
-	                    ->setClass('scalable')
-	                    ->setLabel($doc['name'])
-	                    ->setOnClick("window.open('".$doc['url']."')")
-	                    ->toHtml();
-	        $html .= "<br>";         
-                    
+
+        if(isset($latestVersion['docs']['guides']))
+        {
+            foreach($latestVersion['docs']['guides'] as $doc){
+
+                $html .= $this->getLayout()->createBlock('adminhtml/widget_button')
+                            ->setType('button')
+                            ->setClass('scalable')
+                            ->setLabel($doc['name'])
+                            ->setOnClick("window.open('".$doc['url']."')")
+                            ->toHtml();
+                $html .= "<br>";
+
+            }
         }
-        
+
         if(count($latestVersion['docs']['websites']) > 0){
         	$html .= Mage::helper('payu_account')->__('More info on').":<br>";
         }
-        
-        foreach($latestVersion['docs']['websites'] as $key => $website){
-        
-        	
-	        $html .= $this->getLayout()->createBlock('adminhtml/widget_button')
-	                    ->setType('button')
-	                    ->setClass('scalable')
-	                    ->setLabel($website['name'])
-	                    ->setOnClick("window.open('".$website['url']."')")
-	                    ->toHtml();
-	        $html .= "<br>";         
-                    
+
+        if(isset($latestVersion['docs']['websites']))
+        {
+            foreach($latestVersion['docs']['websites'] as $key => $website){
+
+
+                $html .= $this->getLayout()->createBlock('adminhtml/widget_button')
+                            ->setType('button')
+                            ->setClass('scalable')
+                            ->setLabel($website['name'])
+                            ->setOnClick("window.open('".$website['url']."')")
+                            ->toHtml();
+                $html .= "<br>";
+
+            }
         }
 
         $html .= $latestVersion['description'];

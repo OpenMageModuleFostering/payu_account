@@ -1,7 +1,7 @@
 {
     "name": "OpenMageModuleFostering/PayU_Account",
     "type": "magento-module",
-    "license": "LGPL-3.0",
+    "license": "GPL-3.0",
     "homepage": "",
     "description": "Official PayU payment gateway module.",
     "authors": [
