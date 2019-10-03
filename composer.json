@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/PayU_Account",
+    "name": "OpenMageModuleFostering\/PayU_Account",
     "type": "magento-module",
     "license": "Free",
     "homepage": "",
     "description": "The plug-in redirects to payment method summary page where user can choose among the most popular payment methods.",
     "authors": [
-    {
-        "name": "PayU",
-        "email": "sdk@payu.com"
-    }
-],
+        {
+            "name": "PayU",
+            "email": "sdk@payu.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
