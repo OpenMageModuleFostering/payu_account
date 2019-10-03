@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 The plug-in redirects to payment method summary page where user can choose among the most popular payment methods.
